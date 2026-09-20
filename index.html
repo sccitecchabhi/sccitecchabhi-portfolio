@@ -1303,6 +1303,75 @@
 
 
         /* =========================================================
+           FINAL ALIGNMENT FIX
+           Keep every major section full-width and vertically stacked.
+        ========================================================= */
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        section {
+            display: block !important;
+            position: relative;
+            width: 100% !important;
+            max-width: none !important;
+            clear: both;
+        }
+
+        section > .container {
+            display: block !important;
+            width: min(1120px, calc(100% - 40px)) !important;
+            max-width: 1120px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        #skills, #projects, #resume, #contact {
+            float: none !important;
+            clear: both !important;
+        }
+
+        #skills .skills-grid,
+        #projects .projects-grid {
+            width: 100%;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #projects .project-category {
+            width: 100%;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #projects .project-category + .project-category {
+            margin-top: 70px;
+        }
+
+        #projects .projects-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        #projects .project-card {
+            min-width: 0;
+        }
+
+        @media (max-width: 700px) {
+            section > .container {
+                width: calc(100% - 28px) !important;
+            }
+
+            #skills .skills-grid,
+            #projects .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* =========================================================
            PORTFOLIO LAYOUT REFINEMENT
         ========================================================= */
         .container { width: min(1120px, calc(100% - 40px)); }
@@ -1726,42 +1795,7 @@
                         </span>
 
                     </div>
-
-
-                    <div class="timeline-item">
-
-                        <small>
-                            2023
-                        </small>
-
-                        <strong>
-                            Class XII
-                        </strong>
-
-                        <span>
-                            79.8%
-                        </span>
-
-                    </div>
-
-
-                    <div class="timeline-item">
-
-                        <small>
-                            2021
-                        </small>
-
-                        <strong>
-                            Class X
-                        </strong>
-
-                        <span>
-                            84.34%
-                        </span>
-
-                    </div>
-
-                </div>
+</div>
 
             </div>
 
