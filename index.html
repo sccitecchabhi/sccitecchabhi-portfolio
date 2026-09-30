@@ -1444,6 +1444,70 @@
             .hero-buttons .btn { width:100%; }
         }
 
+
+        /* =========================================================
+           PROJECT CARD ALIGNMENT & SPACING FIX
+           Keeps every project card in the same grid structure.
+        ========================================================= */
+
+        #projects .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 920px;
+            margin: 0 auto;
+            align-items: stretch;
+        }
+
+        #projects .project-card {
+            width: 100%;
+            min-width: 0;
+            height: 100%;
+            min-height: 330px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #projects .project-card h4 {
+            margin-top: 18px;
+        }
+
+        #projects .project-card p {
+            min-height: 65px;
+            margin-top: 10px;
+        }
+
+        #projects .project-card .project-link {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        #projects .project-category {
+            width: 100%;
+            max-width: 920px;
+            margin: 0 auto 55px;
+        }
+
+        #projects .project-category:last-child {
+            margin-bottom: 0;
+        }
+
+        #projects .project-category + .project-category {
+            margin-top: 0;
+        }
+
+        @media (max-width: 700px) {
+            #projects .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            #projects .project-card {
+                min-height: auto;
+            }
+        }
+
     </style>
 </head>
 
@@ -2034,25 +2098,15 @@
                 </div>
 
                 <div>
-
-                    <h3>
-                        Data Analytics Projects
-                    </h3>
-
-                    <p>
-                        Business analysis, SQL and dashboard development
-                    </p>
-
+                    <h3>Data Analytics Projects</h3>
+                    <p>Business analysis, SQL and dashboard development</p>
                 </div>
 
             </div>
 
-
             <div class="projects-grid">
 
-
                 <!-- ELECTROHUB -->
-
                 <div class="project-card glass reveal">
 
                     <div class="project-top">
@@ -2061,48 +2115,38 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
 
-                        <div class="project-number">
-                            01
-                        </div>
+                        <div class="project-number">01</div>
 
                     </div>
 
-                    <h4>
-                        ElectroHub E-commerce Analysis
-                    </h4>
+                    <h4>ElectroHub E-commerce Analysis</h4>
 
                     <p>
-                        An end-to-end e-commerce analytics project
-                        focused on customer, order, product and
-                        delivery data to generate business insights
-                        through Python, SQL and Power BI.
+                        An end-to-end e-commerce analytics project focused on
+                        customer, order, product and delivery data to generate
+                        business insights through Python, SQL and Power BI.
                     </p>
 
                     <div class="project-tags">
-
                         <span>Excel</span>
                         <span>Power Query</span>
                         <span>Python</span>
                         <span>SQL</span>
                         <span>Power BI</span>
                         <span>DAX</span>
-
                     </div>
 
                     <a href="https://github.com/sccitecchabhi/ElectroHub-Ecommerce-Analysis"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="project-link">
-
                         View Project
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                     </a>
 
                 </div>
 
-
                 <!-- FINSHIELD -->
-
                 <div class="project-card glass reveal">
 
                     <div class="project-top">
@@ -2111,103 +2155,83 @@
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
 
-                        <div class="project-number">
-                            02
-                        </div>
+                        <div class="project-number">02</div>
 
                     </div>
 
-                    <h4>
-                        FinShield UPI Fraud Transaction Analysis
-                    </h4>
+                    <h4>FinShield UPI Fraud Transaction Analysis</h4>
 
                     <p>
-                        A fraud analytics project analyzing UPI
-                        transactions using Python, SQL and Power BI
-                        to identify transaction patterns, risk factors
-                        and fraud-related insights.
+                        A fraud analytics project analyzing UPI transactions
+                        using Python, SQL and Power BI to identify transaction
+                        patterns, risk factors and fraud-related insights.
                     </p>
 
                     <div class="project-tags">
-
                         <span>Python</span>
                         <span>Pandas</span>
                         <span>SQL</span>
                         <span>Power BI</span>
                         <span>DAX</span>
                         <span>Fraud Analytics</span>
-
                     </div>
 
                     <a href="https://github.com/sccitecchabhi/FinShield_UPI_Fraud_Transaction_Analysis"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="project-link">
-
                         View Project
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                     </a>
 
                 </div>
 
-            </div>
-
-        </div>
-                      
                 <!-- HEART DISEASE -->
-    
                 <div class="project-card glass reveal">
-    
+
                     <div class="project-top">
-    
+
                         <div class="project-icon">
-                            <i class="fa-solid fa-shield-halved"></i>
+                            <i class="fa-solid fa-heart-pulse"></i>
                         </div>
-    
-                        <div class="project-number">
-                            03
-                        </div>
-    
+
+                        <div class="project-number">03</div>
+
                     </div>
-    
-                    <h4>
-                          Heart Disease Data Analysis
-                    </h4>
-    
+
+                    <h4>Heart Disease Data Analysis</h4>
+
                     <p>
                         A healthcare data analytics project analyzing patient
                         data using Python, SQL, Excel and Power BI to identify
                         heart disease patterns, risk factors and demographic
                         insights.
                     </p>
-    
+
                     <div class="project-tags">
-    
-                         <span>Python</span>
-                         <span>Pandas</span>
-                         <span>SQL</span>
-                         <span>Excel</span>
-                         <span>Power BI</span>
-                         <span>DAX</span>
-                         <span>Healthcare Analytics</span>
-    
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>SQL</span>
+                        <span>Excel</span>
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Healthcare Analytics</span>
                     </div>
-    
+
                     <a href="https://github.com/sccitecchabhi/Heart_Disease_Analysis"
                        target="_blank"
+                       rel="noopener noreferrer"
                        class="project-link">
-    
                         View Project
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    
                     </a>
-    
+
                 </div>
-    
+
             </div>
-    
+
         </div>
-    
+
         <!-- ================= MACHINE LEARNING ================= -->
 
         <div class="project-category">
@@ -2247,7 +2271,7 @@
                         </div>
 
                         <div class="project-number">
-                            03
+                            04
                         </div>
 
                     </div>
@@ -2296,7 +2320,7 @@
                         </div>
 
                         <div class="project-number">
-                            04
+                            05
                         </div>
 
                     </div>
@@ -2375,7 +2399,7 @@
                         </div>
 
                         <div class="project-number">
-                            05
+                            06
                         </div>
 
                     </div>
